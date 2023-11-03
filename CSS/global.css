@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+hr {
+  margin-top: 15%;
+  margin-bottom: 15%;
+  color: var(--bs-tertiary-color);
+}
+
+* {
+  font-family: "Inter";
+}
+
+h1,
+h2,
+h3,
+h4,
+b {
+  font-weight: 600;
+}
+
+.card {
+  background-color: var(--bs-tertiary-bg);
+  border: none;
+}
+
+.card-footer {
+  background-color: var(--bs-secondary-bg);
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
