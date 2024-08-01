@@ -9,7 +9,7 @@ body::-webkit-scrollbar {
 
 .background {
   background-size: cover;
-  background-image: url("https://cdn.discordapp.com/attachments/956232127362527232/1152630635916165180/image.png");
+  background-image: url("../Images/Backgrounds/platinum.png");
   width: 100%;
   height: 700px;
   background-repeat: space;
