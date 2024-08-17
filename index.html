@@ -33,6 +33,12 @@
         background-image: url("Images/Backgrounds/deep\ dark.png");
       }
     </style>
+
+    <!-- Website Scripts -->
+    <script src="Scripts/websiteScripts.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   </head>
 
   <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
@@ -189,18 +195,15 @@
     <div class="container" id="projects">
       <h1 style="margin-bottom: 2%"><i class="bi bi-box"></i> My Projects:</h1>
 
-      <div class="justify-content-center row" id="projectsContainer"></div>
       <script>
-        const container = document.getElementById("projectsContainer");
-
-        const projects = [
+        generateCards([
           {
             title: "Project: Skyscraper",
             description:
               "Project: Skyscraper is an infinite platformer game where your goal is to get to the top of an <i>infinitely high</i> skyscraper.",
             image:
               "https://raw.githubusercontent.com/mezoahmedii/project-skyscraper/main/Assets/Images/icon.png",
-            pixelated: true,
+            imagePixelated: true,
             altLink: [
               "Download",
               "https://github.com/mezoahmedii/project-skyscraper/releases/download/v1.1/Project.Skyscraper.v1.1.zip",
@@ -211,7 +214,7 @@
             description:
               "Platinum SMP is a modded private Minecraft SMP with mods like Create, Tinker's Construct, and more.",
             image: "Images/Logos/platinum.png",
-            link: "platinum/index.html",
+            link: ["Learn More", "platinum/index.html"],
           },
           {
             title: "Picker",
@@ -219,7 +222,7 @@
               "Picker is a simple app to pick something out of a list of things.",
             image:
               "https://raw.githubusercontent.com/mezoahmedii/picker/main/data/icons/hicolor/scalable/apps/io.github.mezoahmedii.Picker.svg",
-            link: "https://github.com/mezoahmedii/picker",
+            link: ["Learn More", "https://github.com/mezoahmedii/picker"],
             altLink: [
               "Download",
               "https://github.com/mezoahmedii/picker/releases/tag/release",
@@ -230,42 +233,7 @@
             description: "",
             image: "Images/Logos/soon.png",
           },
-        ];
-
-        projects.forEach((project) => {
-          let text = "";
-          text += `
-          <div class="col-lg-4 col-md-6" style="margin-bottom: 3%">
-          <div class="card">`;
-          if (project.pixelated)
-            text += `<img class="card-img-top" src="${project.image}" alt="Project Logo" style="image-rendering: crisp-edges;"/>`;
-          else
-            text += `<img class="card-img-top" src="${project.image}" alt="Project Logo"/>`;
-          text += `
-            <div class="card-body">
-              <h4 class="card-title">${project.title}</h4>
-              <p class="card-text">${project.description}</p>
-            </div>
-          `;
-          if ((project.link && project.link != "#") || project.altLink) {
-            text += '<div class="card-footer">';
-            if (project.link && project.link != "#")
-              text += `
-                <a class="btn btn-primary" href="${project.link}">
-                  Learn More
-                </a>
-              `;
-            if (project.altLink)
-              text += `
-                <a class="btn btn-outline-primary" href="${project.altLink[1]}">
-                  ${project.altLink[0]}
-                </a>
-              `;
-            text += "</div>";
-          }
-          text += "</div></div>";
-          container.innerHTML += text;
-        });
+        ]);
       </script>
     </div>
 
@@ -307,8 +275,5 @@
     </div>
 
     <hr style="margin-bottom: 0" />
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

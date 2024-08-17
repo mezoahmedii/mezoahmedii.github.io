@@ -42,6 +42,12 @@
         margin-bottom: 5px;
       }
     </style>
+
+    <!-- Website Scripts -->
+    <script src="../Scripts/websiteScripts.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   </head>
 
   <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
@@ -231,48 +237,51 @@
     <div class="container" id="mods">
       <h1><i class="bi bi-box"></i> Mods</h1>
 
-      <div class="justify-content-center row" id="modsContainer"></div>
       <script>
-        const modsContainer = document.getElementById("modsContainer");
-
-        const mods = [
+        generateCards([
           {
             title: "Another Furniture",
             description: "Vanilla-styled Minecraft furniture mod.",
             image:
               "https://cdn.modrinth.com/data/ulloLmqG/c3741a740ede138ab2d62ca49add0ab69dd828d4.png",
-            link: "https://modrinth.com/mod/another-furniture",
+            link: ["Learn More", "https://modrinth.com/mod/another-furniture"],
           },
           {
             title: "Applied Energistics 2",
             description: "AE2: A popular automation and storage mod",
             image: "https://cdn.modrinth.com/data/XxWD5pD3/icon.png",
-            link: "https://modrinth.com/mod/ae2",
+            link: ["Learn More", "https://modrinth.com/mod/ae2"],
           },
           {
             title: "Automobility",
             description: "Vehicle mod adding customizable and functional cars",
             image: "https://cdn.modrinth.com/data/rqIsPf9F/icon.png",
-            link: "https://modrinth.com/mod/automobility",
+            link: ["Learn More", "https://modrinth.com/mod/automobility"],
           },
           {
             title: "Cammie's Minecart Tweaks",
             description:
               "Makes Minecarts more viable as a form of transportation.",
             image: "https://cdn.modrinth.com/data/D2gIe1ZY/icon.png",
-            link: "https://modrinth.com/mod/cammies-minecart-tweaks",
+            link: [
+              "Learn More",
+              "https://modrinth.com/mod/cammies-minecart-tweaks",
+            ],
           },
           {
             title: "Create",
             description: "Aesthetic Technology that empowers the Player",
             image: "https://cdn.modrinth.com/data/LNytGWDc/icon.png",
-            link: "https://modrinth.com/mod/create-fabric",
+            link: ["Learn More", "https://modrinth.com/mod/create-fabric"],
           },
           {
             title: "Deep Mob Learning: Refabricated",
             description: "Alternative, server friendly mob loot acquisition",
             image: "https://cdn.modrinth.com/data/osuPHzT3/icon.png",
-            link: "https://modrinth.com/mod/deep-mob-learning-refabricated",
+            link: [
+              "Learn More",
+              "https://modrinth.com/mod/deep-mob-learning-refabricated",
+            ],
           },
           {
             title: "Deep Mob Learning: Simulacrum",
@@ -280,14 +289,17 @@
               "Ports the simulation chamber to Deep Mob Learning: Refabricated",
             image:
               "https://media.forgecdn.net/avatars/411/815/637630391618576749.png",
-            link: "https://www.curseforge.com/minecraft/mc-mods/deep-mob-learning-simulacrum",
+            link: [
+              "Learn More",
+              "https://www.curseforge.com/minecraft/mc-mods/deep-mob-learning-simulacrum",
+            ],
           },
           {
             title: "Extra Generators",
             description:
               "A technology mod that adds a variety of generators to your world.",
             image: "https://cdn.modrinth.com/data/VXtwLg17/icon.png",
-            link: "https://modrinth.com/mod/extra-generators",
+            link: ["Learn More", "https://modrinth.com/mod/extra-generators"],
           },
           {
             title: "Hephaestus",
@@ -295,7 +307,7 @@
               "Modify all the things, then do it again! Fabric port of Tinkers' Construct",
             image:
               "https://media.forgecdn.net/attachments/429/709/tinkers_construct_logo_2f7.png",
-            link: "https://modrinth.com/mod/hephaestus",
+            link: ["Learn More", "https://modrinth.com/mod/hephaestus"],
           },
           {
             title: "Improved End",
@@ -303,86 +315,61 @@
               "A mod to add tons of new blocks, biomes and mobs to the end dimension",
             image:
               "https://cdn.modrinth.com/data/1qFhISD7/df7dcb73db634df5508b348ae129312129f06f1a.png",
-            link: "https://modrinth.com/mod/improved-end",
+            link: ["Learn More", "https://modrinth.com/mod/improved-end"],
           },
           {
             title: "Rechiseled",
             description:
               "Rechiseled allows you to chisel blocks into various decorative blocks with connected textures!",
             image: "https://cdn.modrinth.com/data/B0g2vT6l/icon.png",
-            link: "https://modrinth.com/mod/rechiseled",
+            link: ["Learn More", "https://modrinth.com/mod/rechiseled"],
           },
           {
             title: "Reinforced Chests",
             description: "Adds reinforced chests.",
             image:
               "https://cdn.modrinth.com/data/FWtAXlpg/130854fbaebc4e03ab252b91b0cd000c2656aa37.png",
-            link: "https://modrinth.com/mod/reinforced-chests",
+            link: ["Learn More", "https://modrinth.com/mod/reinforced-chests"],
           },
           {
             title: "Reinforced Barrels",
             description: "Adds reinforced barrels.",
             image:
               "https://cdn.modrinth.com/data/Tx85779b/5e609e056418253ce45c3038683c21dd7c5cda5a.png",
-            link: "https://modrinth.com/mod/reinforced-barrels",
+            link: ["Learn More", "https://modrinth.com/mod/reinforced-barrels"],
           },
           {
             title: "Reinforced Shulker Boxes",
             description: "Adds reinforced shulker boxes.",
             image:
               "https://cdn.modrinth.com/data/xlOwuSdN/8523a358a9c9e47f80f73c4d27848eed364400b4.png",
-            link: "https://modrinth.com/mod/reinforced-shulker-boxes",
+            link: [
+              "Learn More",
+              "https://modrinth.com/mod/reinforced-shulker-boxes",
+            ],
           },
           {
             title: "Requiem (Removed 7/31/2024)",
             description:
               "Completely changes the death system by adding new mechanics such as player souls and undead possession",
             image: "https://cdn.modrinth.com/data/bYmqMxlQ/icon.png",
-            link: "https://modrinth.com/mod/requiem",
+            link: ["Learn More", "https://modrinth.com/mod/requiem"],
           },
           {
             title: "The Wild Backport",
             description: "Backport features from The Wild Update",
             image:
               "https://cdn.modrinth.com/data/UEBvC2bZ/46ad756e2216e1ecd3fcd35e7061a5fc8d30e742.png",
-            link: "https://modrinth.com/mod/wildbackport",
+            link: ["Learn More", "https://modrinth.com/mod/wildbackport"],
           },
           {
             title: "Vanilla Hammers",
             description: "This mod adds Hammers to Minecraft",
             image:
               "https://cdn.modrinth.com/data/iTcz8g0Q/37b411bb9bdf4afa5e5d898e70eae7428149978d.png",
-            link: "https://modrinth.com/mod/vanilla-hammers",
+            link: ["Learn More", "https://modrinth.com/mod/vanilla-hammers"],
           },
-        ];
-
-        mods.forEach((mod) => {
-          let text = "";
-          text += `
-          <div class="col-lg-3 col-md-6" style="margin-bottom: 3%">
-          <div class="card">`;
-          if (mod.pixelated)
-            text += `<img class="card-img-top" src="${mod.image}" alt="Mod Logo" style="image-rendering: crisp-edges;"/>`;
-          else
-            text += `<img class="card-img-top" src="${mod.image}" alt="Mod Logo"/>`;
-          text += `
-            <div class="card-body">
-              <h4 class="card-title">${mod.title}</h4>
-              <p class="card-text">${mod.description}</p>
-            </div>
-          `;
-          if (mod.link && mod.link != "#") {
-            text += `
-              <div class="card-footer">
-                <a class="btn btn-primary" href="${mod.link}">
-                  Learn More
-                </a>
-              </div>
-              `;
-          }
-          text += "</div></div>";
-          modsContainer.innerHTML += text;
-        });
+        ]);
       </script>
     </div>
 
@@ -392,58 +379,28 @@
     <div class="container" id="members">
       <h1 style="margin-bottom: 2%"><i class="bi bi-people"></i> Members:</h1>
 
-      <div class="justify-content-center row" id="membersContainer"></div>
       <script>
-        const container = document.getElementById("membersContainer");
-
-        const members = [
+        generateCards([
           {
-            name: "MezoAhmedII (Mezo)",
+            title: "MezoAhmedII (Mezo)",
             image: "../Images/PFPs/mezo big.png",
-            link: ["../index.html", "Website"],
+            link: ["Website", "../index.html"],
           },
           {
-            name: "x0mar (Omar)",
+            title: "x0mar (Omar)",
             image: "../Images/PFPs/omar.png",
-            link: ["https://www.youtube.com/@x0mar", "YouTube"],
+            link: ["YouTube", "https://www.youtube.com/@x0mar"],
           },
           {
-            name: "Abdullah",
+            title: "Abdullah",
             image: "../Images/PFPs/abdullah.png",
           },
           {
-            name: "Tanji",
+            title: "Tanji",
             image: "../Images/PFPs/tanji.png",
-            link: ["https://www.youtube.com/@TanjiDev", "YouTube"],
+            link: ["YouTube", "https://www.youtube.com/@TanjiDev"],
           },
-        ];
-
-        members.forEach((member) => {
-          let text = "";
-          text += `
-          <div class="col-lg-3 col-md-6" style="margin-bottom: 3%">
-          <div class="card">`;
-          if (member.pixelated)
-            text += `<img class="card-img-top" src="${member.image}" alt="Member Profile Picture" style="image-rendering: crisp-edges;"/>`;
-          else
-            text += `<img class="card-img-top" src="${member.image}" alt="Member Profile Picture"/>`;
-          text += `
-            <div class="card-body">
-              <h4 class="card-title">${member.name}</h4>
-            </div>
-          `;
-          if (member.link && member.link[0] != "#") {
-            text += '<div class="card-footer">';
-            text += `
-              <a class="btn btn-primary" href="${member.link[0]}">
-                ${member.link[1]}
-              </a>
-            `;
-            text += "</div>";
-          }
-          text += "</div></div>";
-          container.innerHTML += text;
-        });
+        ]);
       </script>
     </div>
 
@@ -463,8 +420,5 @@
     </div>
 
     <hr style="margin-bottom: 0" />
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
