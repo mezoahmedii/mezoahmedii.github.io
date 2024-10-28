@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,13 +11,16 @@
       type="image/x-icon"
     />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="CSS/purple.css" />
-
-    <!-- Bootstrap Icons CSS -->
+    <!-- Bulma CSS -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+
+    <!-- Remix Icons CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css"
+      rel="stylesheet"
     />
 
     <!-- Website CSS -->
@@ -32,126 +35,98 @@
 
     <!-- Website Scripts -->
     <script src="Scripts/websiteScripts.js"></script>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   </head>
 
-  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+  <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md bg-primary sticky-top">
-      <a href="#" class="navbar-brand">
-        <img
-          src="Images/PFPs/mezo small.png"
-          alt="Logo"
-          style="width: 32px; margin-left: 14px"
-          class="rounded d-inline-block align-text-top"
-        />
-        MezoAhmedII
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        style="margin-right: 14px"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapsibleNavbar"
-      >
-        <i class="bi bi-list"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a href="#welcome" class="nav-link active">
-              <i class="bi bi-house"></i> Welcome
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#socials" class="nav-link">
-              <i class="bi bi-chat-dots"></i> Socials
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#projects" class="nav-link">
-              <i class="bi bi-box"></i> Projects
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#about" class="nav-link"
-              ><i class="bi bi-person"></i> About Me
-            </a>
-          </li>
-        </ul>
+    <nav
+      class="navbar is-primary is-fixed-top has-shadow"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img
+            src="Images/PFPs/mezo small.png"
+            alt="Logo"
+            class="is-slightly-rounded"
+          />
+          MezoAhmedII
+        </a>
+
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="scrollspyItems"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="scrollspyItems" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="#welcome" data-target="welcome">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="ri-home-4-line"></i>
+              </span>
+              <span>Welcome</span>
+            </span>
+          </a>
+          <a class="navbar-item" href="#socials" data-target="socials">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="ri-chat-thread-line"></i>
+              </span>
+              <span>Socials</span>
+            </span>
+          </a>
+          <a class="navbar-item" href="#projects" data-target="projects">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="ri-instance-line"></i>
+              </span>
+              <span>Projects</span>
+            </span>
+          </a>
+          <a class="navbar-item" href="#about" data-target="about">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="ri-user-3-line"></i>
+              </span>
+              <span>About Me</span>
+            </span>
+          </a>
+        </div>
       </div>
     </nav>
 
     <!-- Welcome -->
     <div class="welcome" id="welcome">
-      <!-- Welcome Large -->
-      <div class="justify-content-center d-none d-lg-flex">
-        <div class="card mb-3" style="max-width: 900px">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img
-                src="Images/PFPs/mezo big.png"
-                class="img-fluid rounded-start"
-                alt="Avatar"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h1 class="card-title">Welcome to my website!</h1>
-                <p class="card-text">
-                  This website will be the place for my projects and socials
-                  links.<br />Also, you can learn a little more about me on the
-                  <a href="#about">about me section</a>.
-                </p>
-              </div>
-            </div>
+      <div class="blur-box has-text-centered">
+        <div
+          class="is-flex-desktop is-justify-content-center is-align-items-center m-2"
+        >
+          <div class="is-flex is-justify-content-center">
+            <img
+              src="Images/PFPs/mezo big.png"
+              class="image is-128x128 is-slightly-rounded m-1"
+              alt="Avatar"
+            />
           </div>
+          <h1 class="title is-1 m-1 is-outlined">Welcome!</h1>
         </div>
-      </div>
-
-      <!-- Welcome Medium -->
-      <div class="justify-content-center d-none d-md-flex d-lg-none">
-        <div class="card mb-3" style="max-width: 600px">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img
-                src="Images/PFPs/mezo big.png"
-                class="img-fluid rounded-start"
-                alt="Avatar"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h3 class="card-title">Welcome to my website!</h3>
-                <p class="card-text">
-                  This website will be the place for my projects and socials
-                  links.<br />Also, you can learn a little more about me on the
-                  <a href="#about">about me section</a>.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Welcome Small -->
-      <div class="justify-content-center d-flex d-md-none">
-        <div class="card">
-          <div class="card-body">
-            <h3 class="card-title">Welcome to my website!</h3>
-            <p class="card-text">
-              This website will be the place for my projects and socials
-              links.<br />Also, you can learn a little more about me on the
-              <a href="#about">about me section</a>.
-            </p>
-          </div>
-          <img
-            class="card-img-bottom"
-            src="Images/PFPs/mezo big.png"
-            alt="Avatar"
-          />
+        <div>
+          <p class="subtitle is-outlined">
+            This website will be the place for my projects and socials links.<br />Also,
+            you can learn a little more about me on the
+            <a href="#about">about me section</a>.
+          </p>
         </div>
       </div>
     </div>
@@ -159,37 +134,73 @@
     <hr style="margin-top: 0" />
 
     <!-- Socials -->
-    <div class="container" id="socials">
-      <h1><i class="bi bi-chat-dots"></i> My Socials:</h1>
+    <section class="section" id="socials">
+      <span class="icon-text">
+        <span class="icon is-large title is-1">
+          <i class="ri-chat-thread-line"></i>
+        </span>
+        <span class="title is-1">My Socials:</span>
+      </span>
+
       <ul class="list-unstyled">
-        <li class="h5">
-          <i class="bi bi-twitter"></i> Twitter:
+        <li>
+          <span class="icon-text">
+            <span class="icon">
+              <i class="ri-twitter-fill"></i>
+            </span>
+            <span>Twitter / X:</span>
+          </span>
           <a href="https://twitter.com/mezoahmedII">@mezoahmedII</a>
         </li>
-        <li class="h5">
-          <i class="bi bi-youtube"></i> Youtube:
+        <li>
+          <span class="icon-text">
+            <span class="icon">
+              <i class="ri-youtube-fill"></i>
+            </span>
+            <span>YouTube:</span>
+          </span>
           <a href="https://www.youtube.com/@mezoahmedii">@mezoahmedii</a>
         </li>
-        <li class="h5">
-          <i class="bi bi-discord"></i> Discord:
-          <abbr title="No available link..">@mezoahmedii</abbr>
+        <li>
+          <span class="icon-text">
+            <span class="icon">
+              <i class="ri-discord-fill"></i>
+            </span>
+            <span>Discord:</span>
+          </span>
+          <abbr title="No available link">@mezoahmedii</abbr>
         </li>
-        <li class="h5">
-          <i class="bi bi-github"></i> Github:
+        <li>
+          <span class="icon-text">
+            <span class="icon">
+              <i class="ri-github-fill"></i>
+            </span>
+            <span>GitHub:</span>
+          </span>
           <a href="https://github.com/mezoahmedii">@mezoahmedii</a>
         </li>
-        <li class="h5">
-          <i class="bi bi-instagram"></i> Instagram:
+        <li>
+          <span class="icon-text">
+            <span class="icon">
+              <i class="ri-instagram-fill"></i>
+            </span>
+            <span>Instagram:</span>
+          </span>
           <a href="https://www.instagram.com/mezoahmedii">@mezoahmedii</a>
         </li>
       </ul>
-    </div>
+    </section>
 
     <hr />
 
     <!-- Projects -->
-    <div class="container" id="projects">
-      <h1 style="margin-bottom: 2%"><i class="bi bi-box"></i> My Projects:</h1>
+    <div class="section" id="projects">
+      <span class="icon-text">
+        <span class="icon is-large title is-1">
+          <i class="ri-instance-line"></i>
+        </span>
+        <span class="title is-1">My Projects:</span>
+      </span>
 
       <script>
         generateCards([
@@ -221,7 +232,7 @@
             link: ["Learn More", "https://github.com/mezoahmedii/picker"],
             altLink: [
               "Download",
-              "https://github.com/mezoahmedii/picker/releases/tag/release",
+              "https://github.com/mezoahmedii/picker/releases/",
             ],
           },
           {
@@ -236,26 +247,41 @@
     <hr />
 
     <!-- About Me -->
-    <div class="container" id="about">
-      <h1><i class="bi bi-person"></i> About Me:</h1>
-      <p class="lead">
+    <section class="section" id="about">
+      <span class="icon-text">
+        <span class="icon is-large title is-1">
+          <i class="ri-user-3-line"></i>
+        </span>
+        <span class="title is-1">About Me:</span>
+      </span>
+
+      <p class="subtitle">
         I love coding, cubing, and I have an overall interest in puzzles.
       </p>
       <br />
-      <h4><i class="bi bi-code-slash"></i> Coding:</h4>
+      <span class="icon is-large is-size-3">
+        <i class="ri-code-s-slash-fill"></i>
+      </span>
+      <h3 class="is-size-3 is-inline">Coding:</h2>
       <p class="lead">
         I like creating games, websites, and other stuff. Most of my projects
         will be put in the <a href="#projects">projects section</a>, so you can
         go check them out.
       </p>
       <br />
-      <h4><i class="bi bi-box"></i> Cubing:</h4>
+      <span class="icon is-large is-size-3">
+        <i class="ri-box-3-line"></i>
+      </span>
+      <h3 class="is-size-3 is-inline">Cubing:</h2>
       <p class="lead">
         I mostly do 3x3, skewb, and some 4x4 sometimes. My PB in 3x3 is 29.82,
         and my average is about 35 seconds
       </p>
       <br />
-      <h4><i class="bi bi-controller"></i> Gaming:</h4>
+      <span class="icon is-large is-size-3">
+        <i class="ri-gamepad-line"></i>
+      </span>
+      <h3 class="is-size-3 is-inline">Gaming:</h2>
       <p class="lead">
         I like multiple games, some of which are Minecraft, Bloons,
         <a href="https://store.steampowered.com/app/531510/Just_Shapes__Beats/"
@@ -268,8 +294,8 @@
           >CelLua Machine.</a
         >
       </p>
-    </div>
+    </section>
 
-    <hr style="margin-bottom: 0" />
+    <hr />
   </body>
 </html>
