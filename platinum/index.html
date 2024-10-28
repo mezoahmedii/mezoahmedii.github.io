@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,17 +11,16 @@
       type="image/x-icon"
     />
 
-    <!-- Bootstrap CSS -->
+    <!-- Bulma CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
     />
-    <link rel="stylesheet" href="../CSS/purple.css" />
 
-    <!-- Bootstrap Icons CSS -->
+    <!-- Remix Icons CSS -->
     <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
     />
 
     <!-- Website CSS -->
@@ -32,201 +31,121 @@
       .welcome {
         background-image: url("../Images/Backgrounds/platinum.png");
       }
-
-      .center {
-        display: flex;
-        align-items: center;
-      }
-
-      .btn {
-        margin-bottom: 5px;
-      }
     </style>
 
     <!-- Website Scripts -->
     <script src="../Scripts/websiteScripts.js"></script>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   </head>
 
-  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+  <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md bg-primary sticky-top">
-      <a href="#" class="navbar-brand">
-        <img
-          src="../Images/Logos/platinum.png"
-          alt="Logo"
-          style="width: 32px; margin-left: 14px"
-          class="rounded d-inline-block align-text-top"
-        />
-        Platinum SMP
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        style="margin-right: 14px"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapsibleNavbar"
-      >
-        <i class="bi bi-list"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a href="#welcome" class="nav-link active">
-              <i class="bi bi-house"></i> Welcome
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#mods" class="nav-link">
-              <i class="bi bi-box"></i> Mods
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#members" class="nav-link">
-              <i class="bi bi-people"></i> Members
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#info" class="nav-link"
-              ><i class="bi bi-info-circle"></i> Info
-            </a>
-          </li>
-        </ul>
+    <nav
+      class="navbar is-primary is-fixed-top has-shadow"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item" href="../index.html">
+          <img
+            src="../Images/PFPs/mezo small.png"
+            alt="Logo"
+            class="is-slightly-rounded"
+          />
+          MezoAhmedII
+        </a>
+
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="scrollspyItems"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="scrollspyItems" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="#welcome" data-target="welcome">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="ri-home-4-line"></i>
+              </span>
+              <span>Welcome</span>
+            </span>
+          </a>
+          <a class="navbar-item" href="#mods" data-target="mods">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="ri-instance-line"></i>
+              </span>
+              <span>Mods</span>
+            </span>
+          </a>
+          <a class="navbar-item" href="#members" data-target="members">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="ri-group-line"></i>
+              </span>
+              <span>Members</span>
+            </span>
+          </a>
+          <a class="navbar-item" href="#info" data-target="info">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="ri-information-2-line"></i>
+              </span>
+              <span>Info</span>
+            </span>
+          </a>
+        </div>
       </div>
     </nav>
 
     <!-- Welcome -->
     <div class="welcome" id="welcome">
-      <!-- Welcome Large -->
-      <div class="justify-content-center d-none d-lg-flex">
-        <div class="card mb-3" style="max-width: 900px">
-          <div class="row g-0">
-            <div class="col-md-4 center">
-              <img
-                src="../Images/Logos/platinum.png"
-                class="img-fluid rounded-start"
-                alt="Avatar"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h2 class="card-title">Platinum SMP</h2>
-                <p class="card-text">
-                  A modded private Minecraft SMP with mods like Create, Tinker's
-                  Construct, and more.
-                </p>
-                <a
-                  type="button"
-                  href="https://www.youtube.com/playlist?list=PLu-8jdhVkT6as-rj457Eccwa_mR31dIE6"
-                  class="btn btn-primary"
-                >
-                  Playlist (Mezo)
-                </a>
-                <a
-                  type="button"
-                  href="https://www.youtube.com/playlist?list=PLu-8jdhVkT6akmPk3YquHvEzCczbICwil"
-                  class="btn btn-primary"
-                >
-                  Playlist (Omar)
-                </a>
-                <a
-                  type="button"
-                  href="https://www.youtube.com/playlist?list=PLu-8jdhVkT6ZXLFvT_xqPb42ZtsGQeX11"
-                  class="btn btn-primary"
-                >
-                  Playlist (Tanji)
-                </a>
-              </div>
-            </div>
+      <div class="blur-box has-text-centered">
+        <div
+          class="is-flex-desktop is-justify-content-center is-align-items-center m-2"
+        >
+          <div class="is-flex is-justify-content-center">
+            <img
+              src="../Images/Logos/platinum.png"
+              class="image is-128x128 is-slightly-rounded m-1"
+              alt="Avatar"
+            />
           </div>
+          <h1 class="title is-1 m-1 is-outlined">Platinum SMP</h1>
         </div>
-      </div>
-
-      <!-- Welcome Medium -->
-      <div class="justify-content-center d-none d-md-flex d-lg-none">
-        <div class="card mb-3" style="max-width: 600px">
-          <div class="row g-0">
-            <div class="col-md-4 center">
-              <img
-                src="../Images/Logos/platinum.png"
-                class="img-fluid rounded-start"
-                alt="Avatar"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h4 class="card-title">Platinum SMP</h4>
-                <p class="card-text">
-                  A modded private Minecraft SMP with mods like Create, Tinker's
-                  Construct, and more.
-                </p>
-                <a
-                  type="button"
-                  href="https://www.youtube.com/playlist?list=PLu-8jdhVkT6as-rj457Eccwa_mR31dIE6"
-                  class="btn btn-primary"
-                >
-                  Playlist (Mezo)
-                </a>
-                <a
-                  type="button"
-                  href="https://www.youtube.com/playlist?list=PLu-8jdhVkT6akmPk3YquHvEzCczbICwil"
-                  class="btn btn-primary"
-                >
-                  Playlist (Omar)
-                </a>
-                <a
-                  type="button"
-                  href="https://www.youtube.com/playlist?list=PLu-8jdhVkT6ZXLFvT_xqPb42ZtsGQeX11"
-                  class="btn btn-primary"
-                >
-                  Playlist (Tanji)
-                </a>
-              </div>
-            </div>
-          </div>
+        <div>
+          <p class="subtitle is-outlined">
+            A modded private Minecraft SMP with mods like Create, Tinker's
+            Construct, and more.
+          </p>
         </div>
-      </div>
-
-      <!-- Welcome Small -->
-      <div class="justify-content-center d-flex d-md-none">
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">Platinum SMP</h4>
-            <p class="card-text">
-              A modded private Minecraft SMP with mods like Create, Tinker's
-              Construct, and more.
-            </p>
-          </div>
-          <img
-            class="card-img-bottom"
-            src="../Images/Logos/platinum.png"
-            alt="Avatar"
-          />
-          <div class="card-footer">
-            <a
-              type="button"
-              href="https://www.youtube.com/playlist?list=PLu-8jdhVkT6as-rj457Eccwa_mR31dIE6"
-              class="btn btn-primary"
-            >
-              Playlist (Mezo)
-            </a>
-            <a
-              type="button"
-              href="https://www.youtube.com/playlist?list=PLu-8jdhVkT6akmPk3YquHvEzCczbICwil"
-              class="btn btn-primary"
-            >
-              Playlist (Omar)
-            </a>
-            <a
-              type="button"
-              href="https://www.youtube.com/playlist?list=PLu-8jdhVkT6ZXLFvT_xqPb42ZtsGQeX11"
-              class="btn btn-primary"
-            >
-              Playlist (Tanji)
-            </a>
-          </div>
+        <div class="is-inline-flex m-2">
+          <a
+            href="https://www.youtube.com/playlist?list=PLu-8jdhVkT6as-rj457Eccwa_mR31dIE6"
+            class="button is-primary m-1"
+          >
+            Playlist (Mezo)
+          </a>
+          <a
+            href="https://www.youtube.com/playlist?list=PLu-8jdhVkT6akmPk3YquHvEzCczbICwil"
+            class="button is-primary m-1"
+          >
+            Playlist (Omar)
+          </a>
+          <a
+            href="https://www.youtube.com/playlist?list=PLu-8jdhVkT6ZXLFvT_xqPb42ZtsGQeX11"
+            class="button is-primary m-1"
+          >
+            Playlist (Tanji)
+          </a>
         </div>
       </div>
     </div>
@@ -234,8 +153,13 @@
     <hr style="margin-top: 0" />
 
     <!-- Mods -->
-    <div class="container" id="mods">
-      <h1><i class="bi bi-box"></i> Mods</h1>
+    <div class="section" id="mods">
+      <span class="icon-text">
+        <span class="icon is-large title is-1">
+          <i class="ri-instance-line"></i>
+        </span>
+        <span class="title is-1">Mods:</span>
+      </span>
 
       <script>
         generateCards([
@@ -271,7 +195,8 @@
           {
             title: "Create",
             description: "Aesthetic Technology that empowers the Player",
-            image: "https://cdn.modrinth.com/data/LNytGWDc/icon.png",
+            image:
+              "https://cdn.modrinth.com/data/LNytGWDc/61d716699bcf1ec42ed4926a9e1c7311be6087e2_96.webp",
             link: ["Learn More", "https://modrinth.com/mod/create-fabric"],
           },
           {
@@ -376,8 +301,13 @@
     <hr />
 
     <!-- Members -->
-    <div class="container" id="members">
-      <h1 style="margin-bottom: 2%"><i class="bi bi-people"></i> Members:</h1>
+    <div class="section" id="members">
+      <span class="icon-text">
+        <span class="icon is-large title is-1">
+          <i class="ri-group-line"></i>
+        </span>
+        <span class="title is-1">Members:</span>
+      </span>
 
       <script>
         generateCards([
@@ -408,8 +338,13 @@
 
     <!-- Info -->
     <div class="container" id="info">
-      <h1><i class="bi bi-info-circle"></i> Info:</h1>
-      <p class="lead">
+      <span class="icon-text">
+        <span class="icon is-large title is-1">
+          <i class="ri-information-2-line"></i>
+        </span>
+        <span class="title is-1">More Info:</span>
+      </span>
+      <p>
         <b>Version:</b> Java Fabric 1.18.2<br />
         <b>Idea by:</b> Mezo & Abdullah<br />
         <b>Server Setup:</b> Mezo & Omar<br />
@@ -419,6 +354,6 @@
       </p>
     </div>
 
-    <hr style="margin-bottom: 0" />
+    <hr />
   </body>
 </html>
