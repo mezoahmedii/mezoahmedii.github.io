@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap");
 
 :root {
   --bulma-primary-h: 266deg;
@@ -24,7 +24,7 @@ h2,
 h3,
 h4,
 b {
-  font-weight: 600;
+  font-weight: 60;
 }
 
 .welcome {
@@ -43,19 +43,11 @@ b {
     var(--bulma-scheme-h),
     var(--bulma-scheme-s),
     var(--bulma-scheme-main-l),
-    0.25
+    0.4
   );
   border-radius: 25px;
   backdrop-filter: blur(10px);
 }
-
-/* .is-outlined {
-  text-shadow:
-    1px 1px 0 var(--bulma-scheme-main),
-    -1px 1px 0 var(--bulma-scheme-main),
-    -1px -1px 0 var(--bulma-scheme-main),
-    1px -1px 0 var(--bulma-scheme-main);
-} */
 
 .navbar-burger {
   color: var(--bulma-navbar-item-color);
