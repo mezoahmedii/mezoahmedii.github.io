@@ -47,6 +47,7 @@ b {
   );
   border-radius: 25px;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .navbar-burger {
