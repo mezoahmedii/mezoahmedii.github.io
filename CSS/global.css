@@ -15,8 +15,8 @@ html {
 }
 
 hr {
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 
 h1,
@@ -39,12 +39,10 @@ b {
 
 .blur-box {
   padding: 5%;
-  background-color: hsla(
-    var(--bulma-scheme-h),
-    var(--bulma-scheme-s),
-    var(--bulma-scheme-main-l),
-    0.4
-  );
+  background-color: hsla(var(--bulma-scheme-h),
+      var(--bulma-scheme-s),
+      var(--bulma-scheme-main-l),
+      0.4);
   border-radius: 25px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
